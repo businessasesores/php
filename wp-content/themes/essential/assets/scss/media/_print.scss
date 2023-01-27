@@ -1,0 +1,52 @@
+// main: ../style.scss
+
+@media print {
+
+   *, *::before, *::after {
+      background: transparent !important;
+      box-shadow: none !important;
+      text-shadow: none !important;
+   }
+
+   a {
+      &:not(.btn) {
+         text-decoration: underline;
+      }
+   }
+
+   abbr[title]::after {
+      content: " (" attr(title) ")";
+   }
+
+   pre {
+      white-space: pre-wrap !important;
+   }
+
+   pre, blockquote {
+      border: $border-width solid var(--light);
+
+      page-break-inside: avoid;
+   }
+
+   thead {
+      display: table-header-group;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+	p, h2, h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h2, h3 {
+		page-break-after: avoid;
+	}
+
+	@page {
+		size: a4;
+	}
+
+}

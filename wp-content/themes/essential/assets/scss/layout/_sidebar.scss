@@ -1,0 +1,15 @@
+// main: ../style.scss
+
+.sidebar {
+	&.widget_area {
+		margin: 0 0 10rem 0;
+	}
+
+	.widget {
+		margin-bottom: 2.5rem;
+
+		.title-w {
+			font-size: $h4-font-size;
+		}
+	}
+}

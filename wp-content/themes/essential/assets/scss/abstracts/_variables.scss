@@ -1,0 +1,127 @@
+// main: ../style.scss
+
+:root {
+   --text:                    #555555;
+   --primary:                 #1E1E1E;
+   --secondary:               #EFEFEF;
+   --light:                   #EFEFEF;
+   --dark:                    #000000;
+   --dark-light:              rgba(0, 0, 0, 0.7);
+   --background:              #FFFFFF;
+   --header-background:       rgba(255, 255, 255, 0.9);
+   --header-color:            #1E1E1E;
+   --footer-background:       #1E1E1E;
+   --footer-color:            #FFFFFF;
+   --font-size:               1rem;
+}
+
+$gray:                        #EDEDED;
+$gray-light:                  #FAFAFA;
+$white:                       #FFFFFF;
+$black:                       #000000;
+$red:                         #E84D41;
+$green:                       #2AE879;
+
+$paragraph-margin-bottom:     2rem;
+
+$grid-breakpoints: (
+   xs: 0,
+   sm: 576px,
+   md: 992px,
+   lg: 1200px,
+   xl: 1440px,
+   xxl: 1680px,
+   xxxl: 1920px,
+   xxxxl: 2048px
+);
+
+$container-max-widths: (
+   sm: 100%,
+   md: 912px,
+   lg: 1040px,
+   xl: 1140px,
+   xxl: 1380px,
+   xxxl: 1440px,
+   xxxxl: 1560px
+);
+
+$grid-columns:                12;
+$grid-gutter-width:           3rem;
+
+$line-height-base:            calc(1em + 1.25rem);
+$line-height-lg:              calc(1em + 1.5rem);
+$line-height-sm:              calc(1em + 0.75rem);
+
+$border-width:                1px;
+$border-color:                var(--primary);
+
+$border-radius:               10px;
+$border-radius-lg:            20px;
+$border-radius-sm:            5px;
+
+$box-shadow-sm:               0 0 15px var(--text);
+$box-shadow:                  0 0 7.5rem -35px var(--text);
+$box-shadow-lg:               0 0 50px var(--text);
+
+$transition-base:             all 0.5s ease-in-out;
+
+$font-family-base:            'Open Sans', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$font-size-base:              1rem;
+$font-size-lg:                1.25rem;
+$font-size-sm:                0.75rem;
+
+$font-weight-thin:            100;
+$font-weight-lighter:         200;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-medium:          500;
+$font-weight-semibold:        600;
+$font-weight-bold:            700;
+$font-weight-bolder:          800;
+$font-weight-black:           900;
+
+$font-weight-base:            $font-weight-normal;
+
+$h1-font-size:                3.5rem;
+$h2-font-size:                2.5rem;
+$h3-font-size:                2rem;
+$h4-font-size:                1.5rem;
+$h5-font-size:                1.25rem;
+
+$headings-margin-bottom:      1.5rem;
+$headings-font-family:        $font-family-base;
+$headings-font-weight:        $font-weight-semibold;
+$headings-line-height:        calc(1em + 0.75rem);
+$headings-color:              var(--dark);
+
+$lead-margin-bottom:          2rem;
+$lead-font-size:              1.5rem;
+$lead-font-weight:            $font-weight-medium;
+
+$navbar-height:               7.5rem;
+$navbar-small-height:         5rem;
+
+$navbar-nav-link-padding-x:   2rem;
+
+$navbar-toggler-padding-x:    1rem;
+$navbar-toggler-padding-y:    1rem;
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+	(
+		0: 0,
+		1: ($spacer * 0.25),
+		2: ($spacer * 0.5),
+		3: $spacer,
+		4: ($spacer * 1.5),
+		5: ($spacer * 2.5),
+		6: ($spacer * 5),
+		7: ($spacer * 7.5),
+		8: ($spacer * 10),
+      9: ($spacer * 12.5),
+      10: ($spacer * 15),
+	),
+	$spacers
+);

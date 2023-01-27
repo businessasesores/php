@@ -1,0 +1,149 @@
+// main: ../style.scss
+
+/* Colors */
+
+.text-color {
+   color: var(--text) !important;
+}
+
+.primary-color {
+   color: var(--primary) !important;
+}
+
+.secondary-color {
+   color: var(--secondary) !important;
+}
+
+.light-color {
+   color: var(--light) !important;
+}
+
+.white-color {
+   color: $white !important;
+}
+
+.dark-color {
+   color: var(--dark) !important;
+}
+
+/* Background colors */
+
+.primary-color {
+   color: var(--primary) !important;
+}
+
+.secondary-color {
+   color: var(--secondary) !important;
+}
+
+.primary-bg {
+   background-color: var(--primary) !important;
+}
+
+.secondary-bg {
+   background-color: var(--secondary) !important;
+}
+
+.light-bg {
+   background-color: var(--light) !important;
+}
+
+.dark-bg {
+   background-color: var(--dark) !important;
+}
+
+.dark-light-bg {
+   background-color: var(--dark)-light !important;
+}
+
+.gray-bg {
+   background-color: $gray !important;
+}
+
+.gray-light-bg {
+   background-color: $gray-light !important;
+}
+
+.white-bg {
+   background-color: $white !important;
+}
+
+/* Font weights */
+
+.font-weight-thin {
+   font-weight: $font-weight-thin !important;
+}
+
+.font-weight-lighter {
+   font-weight: $font-weight-lighter !important;
+}
+
+.font-weight-light {
+   font-weight: $font-weight-light !important;
+}
+
+.font-weight-normal {
+   font-weight: $font-weight-normal !important;
+}
+
+.font-weight-medium {
+   font-weight: $font-weight-medium !important;
+}
+
+.font-weight-semibold {
+   font-weight: $font-weight-semibold !important;
+}
+
+.font-weight-bold {
+   font-weight: $font-weight-bold !important;
+}
+
+.font-weight-bolder {
+   font-weight: $font-weight-bolder !important;
+}
+
+.font-weight-black {
+   font-weight: $font-weight-black !important;
+}
+
+/* Font size */
+
+.font-size-large {
+   font-size: $font-size-lg !important;
+}
+
+.font-size-default {
+   font-size: $font-size-base !important;
+}
+
+.font-size-small {
+   font-size: $font-size-sm !important;
+}
+
+/* Text transform */
+
+.text-lowercase {
+   text-transform: lowercase !important;
+}
+
+.text-uppercase {
+   text-transform: uppercase !important;
+}
+
+.text-capitalize {
+   text-transform: capitalize !important;
+}
+
+/* Text alignment */
+
+.text-left {
+   text-align: left !important;
+}
+
+.text-center {
+   text-align: center !important;
+}
+
+.text-right {
+   text-align: right !important;
+}

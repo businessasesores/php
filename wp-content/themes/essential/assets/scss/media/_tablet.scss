@@ -1,0 +1,361 @@
+// main: ../style.scss
+
+@include media-breakpoint-down(md) {
+
+   /* WordPress */
+
+   .wp-block-columns:not(.alignwide):not(.main-top) .wp-block-column:not(:first-child) {
+      margin-left: 5rem;
+   }
+
+   .wp-block-cover, .wp-block-cover-image {
+      margin-top: 7.5rem;
+      margin-bottom: 7.5rem;
+      padding: 5rem $grid-gutter-width / 2;
+   }
+
+   .vc_row .wpb_column {
+      .section.counters {
+         padding: 1.5rem 0;
+      }
+   }
+
+   /* Team */
+
+   .team {
+      width: 15rem;
+      height: 20rem;
+
+      margin-top: 2.5rem;
+
+      &, .mask {
+         width: 15rem;
+        height: 20rem;
+      }
+
+      h2 {
+        font-size: var(--font-size);
+
+        padding-top: 5rem;
+      }
+
+      .social-links a.social i {
+        font-size: var(--font-size);
+
+        padding: 0 0.5rem;
+      }
+   }
+
+   /* Footer */
+
+   .site-footer {
+      padding: 2.5rem 0;
+   }
+
+}
+
+@include media-breakpoint-down(sm) {
+
+   html {
+      font-size: $font-size-sm;
+   }
+
+   /* Grid */
+
+   .container {
+      padding: 0 $grid-gutter-width / 2;
+   }
+
+   /* WordPress */
+
+   .wp-block-columns {
+      flex-direction: column;
+
+      margin: 7.5rem 0;
+
+      .wp-block-column {
+         margin-right: 0;
+         margin-bottom: 5rem;
+
+         + .wp-block-column {
+            margin-top: 5rem;
+         }
+      }
+   }
+
+   /* Header */
+
+   .navbar, .navbar.navbar-light {
+      height: $navbar-small-height;
+
+      padding: 0 $grid-gutter-width / 2;
+
+      &.opened {
+         .navbar-brand {
+            a {
+               color: $white;
+            }
+         }
+
+         .navbar-collapse {
+            height: 100vh;
+
+            -webkit-animation: fadeIn 0.75s cubic-bezier(0.85, 0.1, 0.25, 0.85) forwards;
+            animation: fadeIn 0.75s cubic-bezier(0.85, 0.1, 0.25, 0.85) forwards;
+
+            .navbar-nav .nav-item {
+               opacity: 1;
+
+               transition-delay: 0.5s;
+            }
+         }
+
+         .navbar-toggler span {
+            background-color: $white;
+
+            &:first-child {
+               transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+               opacity: 0;
+            }
+
+            &:last-child {
+               transform: rotate(-45deg);
+            }
+         }
+      }
+
+      &.closed {
+         .navbar-brand {
+            a {
+               transition-delay: 0.5s;
+            }
+
+            svg {
+               .secondary {
+                  transition-delay: 1.5s;
+               }
+            }
+         }
+
+         .navbar-collapse {
+            -webkit-animation: fadeOut 1.25s cubic-bezier(0.85, 0.1, 0.25, 0.85) forwards;
+            animation: fadeOut 1.25s cubic-bezier(0.85, 0.1, 0.25, 0.85) forwards;
+
+            .navbar-nav .nav-item {
+               transition-delay: 0s;
+               transition-duration: 0.5s;
+            }
+         }
+
+         .navbar-toggler span {
+            transition-delay: 0.75s;
+         }
+      }
+
+      .navbar-brand {
+         z-index: 1;
+
+         svg {
+            height: 2.5rem;
+         }
+      }
+
+      .navbar-collapse {
+         position: absolute;
+         top: -100%;
+         left: 0;
+
+         display: flex;
+         align-items: center;
+
+         width: 100vw;
+         height: 0;
+
+         background-color: var(--dark);
+
+         .navbar-nav {
+            display: block;
+
+            width: 100%;
+
+            padding: 0 $grid-gutter-width / 2;
+
+            .nav-item {
+               margin: 0;
+
+               opacity: 0;
+
+               transition: opacity 0.5s ease-in-out 0.5s;
+
+               .nav-link {
+                  font-family: $font-family-base;
+                  font-size: $h4-font-size;
+
+                  width: -webkit-max-content;
+                  width: -moz-max-content;
+                  width: max-content;
+
+                  margin: 2.5rem 0;
+
+                  color: $white;
+
+                  &:hover {
+                     opacity: 0.7;
+                  }
+               }
+            }
+         }
+      }
+
+      &.navbar-light.opened .navbar-toggler span {
+         background-color: $white;
+      }
+
+      &.navbar-light .navbar-toggler span {
+         background-color: var(--primary);
+      }
+
+      .navbar-toggler {
+      	position: relative;
+
+      	width: 2rem;
+      	height: 2rem;
+
+      	border: 0;
+      	background-color: transparent;
+
+      	z-index: 10;
+
+      	cursor: pointer;
+
+      	transition: color 0.5s ease-in-out;
+
+      	&:focus {
+      		outline: none;
+      	}
+
+      	span {
+      		position: absolute;
+      		top: 50%;
+      		right: 0;
+
+      		display: block;
+
+      		width: 2rem;
+      		height: $border-width;
+
+      		background-color: $white;
+
+      		transform: translateY(-50%);
+
+      		transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+      		&:first-child {
+      			transform: translateY(-50%) translateY(-12px);
+      		}
+
+      		&:last-child {
+      			transform: translateY(-50%) translateY(12px);
+      		}
+      	}
+      }
+   }
+
+   @-webkit-keyframes fadeIn {
+      from {
+         height: 0;
+      }
+
+      to {
+         height: 100vh;
+      }
+   }
+
+   @keyframes fadeIn {
+      from {
+         height: 0;
+      }
+
+      to {
+         height: 100vh;
+      }
+   }
+
+   @-webkit-keyframes fadeOut {
+      from {
+         height: 100vh;
+   	}
+
+   	to {
+         height: 0;
+   	}
+   }
+
+   @keyframes fadeOut {
+      from {
+         height: 100vh;
+   	}
+
+   	to {
+         height: 0;
+   	}
+   }
+
+   /* About */
+
+   .about-icons {
+      padding: 2.5rem 0;
+   }
+
+   /* Portfolio */
+
+   .filter_group .filter {
+      margin: 0 1rem;
+   }
+
+   .work-item {
+      &:hover {
+         .work-item-info h3,
+         .work-item-info p {
+            -webkit-animation: none;
+            animation: none;
+         }
+      }
+
+      .image-overlay {
+         top: initial;
+         bottom: 0;
+
+         height: 30%;
+
+         background-color: rgba(0, 0, 0, 1);
+
+         &:hover {
+            background-color: rgba(0, 0, 0, 1);
+         }
+
+         a:not(.mfp-iframe) {
+            cursor: default;
+            pointer-events: none;
+         }
+      }
+
+      .work-item-info {
+         opacity: 1;
+
+         h3 {
+            font-size: $font-size-lg;
+
+            line-height: $line-height-sm;
+         }
+
+         p {
+            font-size: $font-size-sm;
+         }
+      }
+   }
+
+}

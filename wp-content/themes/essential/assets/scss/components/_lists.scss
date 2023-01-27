@@ -1,0 +1,72 @@
+// main: ../style.scss
+
+.site-main ul {
+   margin-bottom: $paragraph-margin-bottom;
+
+   list-style: disc;
+   list-style-position: inside;
+
+   &.lead {
+      margin-bottom: $paragraph-margin-bottom * 1.5;
+
+      list-style: none;
+
+      li {
+         font-size: $font-size-lg;
+         font-weight: $lead-font-weight;
+
+         line-height: $headings-line-height;
+
+         margin-bottom: 1.5rem;
+         padding-left: 3rem;
+
+         color: var(--dark-light);
+
+         &::before {
+            content: '';
+
+            position: absolute;
+            top: 50%;
+            left: 0;
+
+            width: 2rem;
+            height: 100%;
+
+            background-image: url('../img/arrow-right-primary.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+
+            transform: translateY(-50%);
+         }
+      }
+
+      strong {
+         font-weight: $font-weight-semibold;
+
+         color: var(--primary);
+      }
+   }
+
+   li {
+      position: relative;
+
+      font-size: $font-size-base;
+
+      line-height: $line-height-base;
+
+      margin-bottom: 1rem;
+
+      &::marker {
+         font-size: $font-size-lg;
+
+         color: var(--primary);
+      }
+   }
+
+   + {
+      h1, h2, h3, h4, h5 {
+         margin-top: 5rem;
+      }
+   }
+}

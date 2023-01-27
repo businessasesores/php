@@ -1,0 +1,40 @@
+// main: ../style.scss
+
+p {
+   + h1, + h2, + h3, + h4, + h5 {
+      margin-top: $paragraph-margin-bottom * 2;
+   }
+
+   + ul {
+      margin-top: $paragraph-margin-bottom;
+   }
+}
+
+strong {
+   font-weight: $font-weight-semibold;
+
+   color: var(--dark);
+}
+
+h1, h2, h3, h4, h5 {
+   color: var(--dark);
+
+   &.has-text-align-center {
+      margin-right: auto;
+      margin-left: auto;
+   }
+
+   strong {
+      font-weight: $font-weight-bold;
+
+      color: var(--primary);
+   }
+
+   + .wp-block-columns, + .wp-block-buttons {
+      margin-top: 5rem;
+   }
+}
+
+h1 {
+   letter-spacing: 0.1rem;
+}

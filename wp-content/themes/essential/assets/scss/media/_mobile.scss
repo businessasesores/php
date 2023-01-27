@@ -1,0 +1,82 @@
+// main: ../style.scss
+
+@include media-breakpoint-down(xs) {
+
+   /* General */
+
+   .main-top {
+   	.main-content {
+   		.container.content {
+   			h1 {
+   			   font-size: 2.5rem;
+
+   			   letter-spacing: 0.25rem;
+   			}
+
+   			h2 {
+   			   font-size: 1.25rem;
+
+   			   letter-spacing: 0.5rem;
+   			}
+   		}
+   	}
+   }
+
+   /* Header */
+
+   .navbar {
+      .navbar-brand {
+         svg {
+            height: 2.25rem;
+
+            -webkit-animation: fadeInLeft cubic-bezier(0.85, 0.1, 0.25, 0.85) 1.5s forwards;
+            animation: fadeInLeft cubic-bezier(0.85, 0.1, 0.25, 0.85) 1.5s forwards;
+         }
+
+         @-webkit-keyframes fadeInLeft {
+            0% {
+               opacity: 0;
+
+               transform: translateX(5%);
+            }
+
+            100% {
+               opacity: 1;
+
+               transform: translateX(0);
+            }
+         }
+
+         @keyframes fadeInLeft {
+            0% {
+               opacity: 0;
+
+               transform: translateX(5%);
+            }
+
+            100% {
+               opacity: 1;
+
+               transform: translateX(0);
+            }
+         }
+      }
+
+      .navbar-collapse {
+         .navbar-nav .nav-item {
+            .nav-link {
+               font-size: $h2-font-size;
+
+               margin: 2.5rem 0;
+            }
+         }
+      }
+   }
+
+   /* Portfolio */
+
+   .filter_group .filter {
+      margin: 0 0.5rem;
+   }
+
+}

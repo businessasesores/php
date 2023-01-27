@@ -1,0 +1,37 @@
+// main: ../style.scss
+
+.contact-icons {
+   li {
+		padding-bottom: 1.5rem;
+   }
+
+   i {
+		font-size: 2rem;
+
+		padding-bottom: 1.5rem;
+   }
+
+   h4 {
+		font-size: var(--font-size);
+
+		letter-spacing: 0.25em;
+
+      margin-bottom: 0.5rem;
+   }
+
+   h4, p {
+		padding-left: 0;
+   }
+
+   p {
+		font-size: $font-size-sm;
+   }
+}
+
+.contact-form {
+	padding-top: 7.5rem;
+
+	.alert, label {
+		display: none;
+	}
+}

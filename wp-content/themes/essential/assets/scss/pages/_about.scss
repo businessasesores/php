@@ -1,0 +1,41 @@
+// main: ../style.scss
+
+.about-icons {
+   i {
+     font-size: 2.5rem;
+
+     color: var(--primary);
+   }
+
+   h4 {
+      font-size: 1.25rem;
+      font-weight: $font-weight-light;
+
+      letter-spacing: 0.25rem;
+
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
+   }
+}
+
+.section.about {
+	width: 100%;
+
+	margin: 0;
+
+	h3 {
+		letter-spacing: 0.25rem;
+
+		color: $white;
+	}
+
+	hr {
+		background-color: $white;
+	}
+
+	p {
+		margin-bottom: 0;
+
+		color: $white;
+	}
+}

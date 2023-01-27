@@ -1,0 +1,122 @@
+// main: ../style.scss
+
+.team {
+	display: flex;
+	overflow: hidden;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	width: 20rem;
+	height: 25rem;
+
+	margin: 0 auto;
+
+	transform: translateZ(0);
+
+	&:hover {
+	   .mask {
+			opacity: 1;
+			background-color: var(--dark-light);
+	   }
+
+		img {
+			transform: scale(1.5);
+		}
+
+		.name {
+			opacity: 1;
+
+			-webkit-animation: fadeInDown 1s;
+			animation: fadeInDown 1s;
+		}
+
+		.role {
+			opacity: 1;
+
+			-webkit-animation: fadeInUp 1.5s;
+			animation: fadeInUp 1.5s;
+		}
+
+		.social-links a.social {
+			opacity: 1;
+
+			-webkit-animation: fadeIn 2s;
+			animation: fadeIn 2s;
+		}
+	}
+
+  .mask {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		display: flex;
+		overflow: hidden;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+
+		width: 20rem;
+		height: 25rem;
+
+		opacity: 0;
+		background-color: var(--dark-color);
+
+		transition: all 0.5s ease-out;
+	}
+
+	.name {
+		position: relative;
+
+		font-size: 1.5rem;
+
+		text-align: center;
+		text-transform: uppercase;
+
+		color: $white;
+	}
+
+	.role {
+		position: relative;
+
+		text-align: center;
+
+		opacity: 0;
+		color: $white;
+	}
+
+	.social-links {
+		display: inline-block;
+
+		a.social {
+			opacity: 0;
+
+			&:hover i {
+				opacity: 0.7;
+			}
+
+			i {
+				font-size: $font-size-lg;
+
+				text-decoration: none;
+				text-transform: uppercase;
+
+				display: inline-block;
+
+				padding: 0 0.75rem;
+
+				color: $white;
+
+				transition: opacity 0.5s ease-in-out;
+			}
+		}
+	}
+
+	img {
+		width: 200%;
+		max-width: none;
+
+		transition: all 2s ease-out;
+	}
+}

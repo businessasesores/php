@@ -1,0 +1,116 @@
+// main: ../style.scss
+
+input {
+	font-family: $font-family-base;
+
+	width: 100%;
+
+   margin: 0;
+   padding: 1rem 1.5rem;
+
+   border: none;
+   border-bottom: $border-width solid rgba(30, 30, 30, 0.3);
+
+   transition: all 0.3s ease-in-out 0.1s;
+
+	&:focus {
+	   border-bottom: $border-width var(--dark);
+		outline: none;
+	}
+
+	&::-webkit-input-placeholder {
+		color: var(-text);
+	}
+
+	&::-moz-placeholder {
+		color: var(-text);
+	}
+
+	&:-ms-input-placeholder {
+		color: var(-text);
+	}
+
+	&::-ms-input-placeholder {
+		color: var(-text);
+	}
+
+	&::placeholder {
+		color: var(-text);
+	}
+}
+
+textarea {
+	font-family: $font-family-base;
+
+	width: 100%;
+   height: 12.5rem;
+
+   margin: 5rem 0 2.5rem 0;
+   padding: 1.5rem 1.5rem 1.5rem 0.75rem;
+
+   border: none;
+   border-bottom: $border-width solid rgba(30, 30, 30, 0.3);
+
+   transition: all 0.3s ease-in-out 0.1s;
+
+	&:focus {
+	   border-bottom: $border-width var(--dark);
+		outline: none;
+	}
+
+	&::-webkit-input-placeholder {
+		color: var(-text);
+	}
+
+	&::-moz-placeholder {
+		color: var(-text);
+	}
+
+	&:-ms-input-placeholder {
+		color: var(-text);
+	}
+
+	&::-ms-input-placeholder {
+		color: var(-text);
+	}
+
+	&::placeholder {
+		color: var(-text);
+	}
+}
+
+.site-main input[type="checkbox"] {
+	display: flex;
+	align-items: center;
+
+	width: 1.5rem;
+	height: 1.5rem;
+
+	margin: 0 1rem 0 0;
+	padding: 0;
+
+	border: 0;
+
+	cursor: pointer;
+
+	&::before {
+		content: '';
+
+		position: relative;
+
+		display: block;
+
+		width: 1.5rem;
+		height: 1.5rem;
+
+		border: $border-width solid $border-color;
+
+		transition: background-color 0.5s ease-in-out;
+	}
+
+	&:checked::before {
+		text-align: center;
+
+		background-color: var(--primary);
+	}
+}

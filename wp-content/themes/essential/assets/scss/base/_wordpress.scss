@@ -1,0 +1,197 @@
+// main: ../style.scss
+
+.alignnone, .aligncenter, .alignleft, .alignright, .alignwide {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.alignfull {
+	position: relative;
+	right: 50%;
+	left: 50%;
+
+	width: 100vw;
+
+	margin-right: -50vw;
+	margin-left: -50vw;
+}
+
+.alignwide {
+	position: relative;
+
+	width: 100%;
+}
+
+.alignnone {
+	clear: both;
+
+	margin: 0 1.5rem 1.5rem 0;
+}
+
+.aligncenter {
+	display: block;
+	clear: both;
+
+	margin: 0 auto 1.5rem auto;
+}
+
+.alignright {
+	float: right;
+	clear: both;
+
+	margin: 0 0 1.5rem 1.5rem;
+}
+
+.alignleft {
+	float: left;
+	clear: both;
+
+	margin: 0 1.5rem 1.5rem 0;
+}
+
+a img.alignright {
+	float: right;
+
+	margin: 0 0 1.5rem 1.5rem;
+}
+
+a img.alignnone {
+	margin: 0 1.5rem 1.5rem 0;
+}
+
+a img.alignleft {
+	float: left;
+
+	margin: 0 1.5rem 1.5rem 0;
+}
+
+a img.aligncenter {
+	display: block;
+
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.wp-block-quote {
+	margin: 5rem 0;
+	padding: 5rem 10rem 5rem 5rem;
+
+	border-left: 0.5rem solid $border-color;
+	background-color: $gray-light;
+
+	p {
+		font-size: $font-size-lg;
+		font-weight: $font-weight-medium;
+		font-style: italic;
+
+		letter-spacing: 0.05rem;
+	}
+
+	cite {
+		display: block;
+
+		margin-top: 2rem;
+
+		color: $gray;
+	}
+}
+
+.wp-block-columns {
+	position: relative;
+
+	margin-top: 15rem;
+	margin-bottom: 15rem;
+
+	z-index: 1;
+
+	&.alignwide {
+		.wp-block-image {
+			height: 100%;
+
+			margin: 0;
+		}
+	}
+
+	&:not(.alignwide) .wp-block-column {
+		width: auto;
+		max-width: 60rem;
+
+		margin-right: auto;
+		margin-left: auto;
+
+		&:not(:first-child) {
+			margin-left: 7.5rem;
+		}
+	}
+}
+
+.wp-block-buttons {
+	.wp-block-button {
+		margin-right: 2rem;
+		margin-bottom: 0;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}
+
+.wp-block-cover, .wp-block-cover-image {
+	margin-top: 15rem;
+	margin-bottom: 15rem;
+	padding: 7.5rem $grid-gutter-width;
+
+	.has-background-dim:not([class*=-background-color]) {
+		background-color: $gray-light;
+
+		transition: background-color 0.5s ease-in-out;
+
+		+ .wp-block-cover__inner-container {
+			h1:not(.has-text-color), h2:not(.has-text-color), h3:not(.has-text-color), h4:not(.has-text-color), h5:not(.has-text-color) {
+				color: var(--dark);
+			}
+
+			p {
+				color: var(--text);
+			}
+		}
+	}
+
+	.wp-block-cover__inner-container {
+		h1, h2, h3, h4, h5 {
+			font-weight: $font-weight-normal;
+
+			margin-bottom: 0;
+
+			strong {
+				font-weight: $font-weight-semibold;
+			}
+		}
+	}
+
+	.wp-block-columns, .wp-block-cover__inner-container .wp-block-column, .wp-block-image {
+		margin: 0;
+	}
+}
+
+.wp-block-image {
+	position: relative;
+
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		height: auto;
+
+		-o-object-fit: cover;
+		object-fit: cover;
+	}
+
+	+ .wp-block-image {
+		margin-top: $grid-gutter-width;
+	}
+
+	+ *:not(.wp-block-columns.alignwide) {
+		margin-top: 10rem;
+	}
+}

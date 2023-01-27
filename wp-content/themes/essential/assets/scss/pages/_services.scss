@@ -1,0 +1,30 @@
+// main: ../style.scss
+
+.services-icons {
+	i {
+		font-size: 2.5rem;
+
+		display: block;
+
+		margin: 5rem 0 1.5rem 0;
+
+		color: var(--primary);
+	}
+
+	.section-content {
+		p {
+			text-align: center;
+
+			padding-bottom: 5rem;
+		}
+
+		.title {
+			font-size: $font-size-lg;
+			font-weight: $font-weight-medium;
+
+			text-align: center;
+
+			margin-bottom: 0;
+		}
+	}
+}

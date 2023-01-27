@@ -1,0 +1,22 @@
+// main: ../style.scss
+
+hr, .wp-block-separator {
+	position: relative;
+
+	width: 5rem;
+	height: $border-width;
+
+	margin: 2.5rem auto;
+
+	border: 0;
+	background-color: var(--primary);
+}
+
+.has-text-align-center, .text-center {
+	+, > {
+		hr, .wp-block-separator {
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+}

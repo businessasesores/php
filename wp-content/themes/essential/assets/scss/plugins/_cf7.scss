@@ -1,0 +1,117 @@
+// main: ../style.scss
+
+form.wpcf7-form {
+   &.sent {
+      > *:not(.wpcf7-response-output) {
+         display: none;
+      }
+
+      .wpcf7-response-output {
+         font-family: $headings-font-family;
+         font-size: $h2-font-size;
+         font-weight: $headings-font-weight;
+
+         line-height: $headings-line-height;
+         text-align: left;
+
+         margin: 0;
+         padding: 0;
+
+         color: var(--dark);
+         border: none;
+      }
+   }
+
+   &.invalid .wpcf7-response-output, &.unaccepted .wpcf7-response-output {
+      color: $red;
+      border-color: $red;
+   }
+
+   &.mail-sent-ok .wpcf7-response-output {
+      color: var(--primary);
+      border-color: var(--primary);
+   }
+
+   input, textarea {
+      &.wpcf7-not-valid {
+         border-color: $red;
+
+         &::-webkit-input-placeholder {
+            color: $red;
+         }
+
+         &::-moz-placeholder {
+            color: $red;
+         }
+
+         &:-ms-input-placeholder {
+            color: $red;
+         }
+
+         &::-ms-input-placeholder {
+            color: $red;
+         }
+
+         &::placeholder {
+            color: $red;
+         }
+      }
+
+      &:disabled {
+         opacity: 1;
+      }
+
+      + span.wpcf7-not-valid-tip {
+         display: none;
+      }
+   }
+
+   .wpcf7-form-control-wrap {
+      display: flex;
+      justify-content: center;
+
+      .wpcf7-form-control {
+         width: 100%;
+
+         .wpcf7-list-item {
+            line-height: $line-height-base;
+
+            width: 100%;
+
+            margin: 0;
+
+            label {
+               display: flex;
+               align-items: center;
+
+               cursor: none;
+
+               .wpcf7-list-item-label {
+                  font-size: 1rem;
+
+                  line-height: $line-height-sm;
+               }
+            }
+         }
+      }
+   }
+
+   .wpcf7-submit {
+      float: right;
+      margin-top: 0;
+   }
+
+   .wpcf7-response-output {
+      font-size: $font-size-lg;
+
+      margin: 7.5rem 0;
+      padding: 1rem 1.5rem;
+
+      color: var(--primary);
+      border: 2px solid var(--primary);
+   }
+
+   .ajax-loader {
+      display: none;
+   }
+}
